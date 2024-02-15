@@ -9,10 +9,14 @@
 <ion-content [fullscreen]="true" >
   <ion-card >
     <ion-header collapse="condense">
-        <ion-title size="large">Завдання 1</ion-title>
+        <ion-title size="large">Завдання 2</ion-title>
     </ion-header>
     <ion-card-content>
-      <p class="p_bg">Задано три числа. Якщо всі вони парні, <br>то знайти їх добуток. В іншому випадку – квадрат суми</p>
+      <p class="p_bg">Підрахуйте добуток
+        цілих чисел на
+        заданому проміжку<br>
+        чисел [a,b], парних і
+        кратних 8.</p>
       <ion-item color="medium">
         <ion-label position="floating">Перше число</ion-label>
         <ion-input type="number" id="a" #Inputa></ion-input>
@@ -21,15 +25,11 @@
         <ion-label position="floating">Друге число</ion-label>
         <ion-input type="number" id="b" #Inputb></ion-input>
       </ion-item>
-      <ion-item color="medium">
-        <ion-label position="floating">Третє число</ion-label>
-        <ion-input type="number" id="c" #Inputc></ion-input>
-      </ion-item>
-      <ion-button expand="block">Розрахунок</ion-button>
+      <ion-button expand="block"  (click)="calculateProduct(Inputa.value, Inputb.value)" >Розрахунок</ion-button>
       <ion-item>
-        <p>Результат обчислення </p>
+        <p>Результат обчислення {{ result }} </p>
       </ion-item>
     </ion-card-content>
   </ion-card>
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <!-- <app-explore-container name="Tab 2 page"></app-explore-container> -->
 </ion-content>

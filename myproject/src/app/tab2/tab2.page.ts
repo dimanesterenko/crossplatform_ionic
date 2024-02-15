@@ -13,5 +13,20 @@ import {IonicModule } from '@ionic/angular';
 export class Tab2Page {
 
   constructor() {}
+  result: number = 0;
+  calculateProduct(a: any, b: any): void {
+    const numA = parseInt(a);
+    const numB = parseInt(b);
 
+    if (!isNaN(numA) && !isNaN(numB)) {
+      this.result = 1;
+      for (let i = numA; i <= numB; i++) {
+        if (i % 2 === 0 && i % 8 === 0) {
+          this.result *= i;
+        }
+      }
+    } else {
+      this.result = 0; 
+    }
+  }
 }
