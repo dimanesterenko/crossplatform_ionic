@@ -1,17 +1,41 @@
+
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Лабороторна робота 1
+    </ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-title>
+      Виконав Нестеренко Дмитро, КН-31
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
+<ion-content [fullscreen]="true" >
+  <ion-card >
+    <ion-header collapse="condense">
+        <ion-title size="large">Завдання 1</ion-title>
+    </ion-header>
+    <ion-card-content>
+      <p class="p_bg">Задано три числа. Якщо всі вони парні, <br>то знайти їх добуток. В іншому випадку – квадрат суми</p>
+      <ion-item color="medium">
+        <ion-label position="floating">Перше число</ion-label>
+        <ion-input type="number" id="a" #Inputa></ion-input>
+      </ion-item>
+      <ion-item color="medium">
+        <ion-label position="floating">Друге число</ion-label>
+        <ion-input type="number" id="b" #Inputb></ion-input>
+      </ion-item>
+      <ion-item color="medium">
+        <ion-label position="floating">Третє число</ion-label>
+        <ion-input type="number" id="c" #Inputc></ion-input>
+      </ion-item>
+      <ion-button expand="block" (click)="ras(Inputa.value,Inputb.value,Inputc.value)">Розрахунок</ion-button>
+      <ion-item>
+        <p>Результат обчислення {{d}}</p>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
   <app-explore-container name="Tab 1 page"></app-explore-container>
 </ion-content>
